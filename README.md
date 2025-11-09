@@ -1,101 +1,53 @@
-# PlotCraft
+<div align="center">
 
-A benchmark for evaluating LLM's ability to generate data visualization code. Supports both single-turn and multi-turn evaluation modes.
+<img width="835" alt="PlotCraft Logo" src="plotcraft.png" style="display: block; margin: 0 auto;" />
 
-## Requirements
+</div>
 
-- Python 3.13
-- OS: Linux
+<div align="center">
+  
+<!-- [![Website + Blogpost](https://img.shields.io/badge/VideoGameBench-Website%20%26%20Blog-blue?style=for-the-badge&logo=readme&logoColor=white&labelColor=1F2937&color=DC2626)](https://www.vgbench.com) -->
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.cnblogs.com%2Fsddai%2Fp%2F13779316.html&up_message=Website&up_color=purple&style=for-the-badge&logo=readme&label=PlotCraft)
+[![arXiv](https://img.shields.io/badge/arXiv-2511.00010-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2511.00010)
+<!-- [![Discord](https://img.shields.io/discord/1377021565773807676?style=for-the-badge&logo=discord&logoColor=white&label=Discord&labelColor=5865F2&color=5865F2)](https://discord.gg/W89VqYhQcy) -->
 
-## Installation
+</div>
 
+---
+
+# PlotCraft: Pushing the Limits of LLMs for Complex and Interactive Data Visualization
+
+<div align="center">
+
+<img alt="PlotCraft Main Fig" src="abstract_fig.jpg"/>
+
+</div>
+
+**PlotCraft** is a rigorous benchmark designed to evaluate the advanced data visualization capabilities of LLMs. It presents ~1k challenging tasks to assess how well models can generate and refine complex plots from natural language instructions.
+
+**Key Features**:
+
+* **Comprehensive Scope**: Includes 982 tasks covering 48 chart types across 8 major domains (e.g., Finance, Health, Research).
+* **Dual Evaluation Modes**: The first benchmark to systematically test both:
+Single-Turn Generation: From scratch, based on an initial request.
+* **Multi-Turn Refinement**:** Iteratively debugging and enhancing existing code.
+* **Focus on Complexity**: Tasks are designed with compositional complexity, requiring multi-panel layouts and combined chart types to test a model's spatial and logical reasoning.
+* **Realistic Workflow**: Built from scratch using real-world datasets and zero-reference instructions (text-only), simulating a practical data analyst workflow.
+
+# Data and Scripts
+<https://github.com/QwenLM/Qwen3-Coder>
+
+<!-- # Installation
 ```bash
+conda create -n plotcraftbench python=3.13
+conda activate plotcraftbench
 pip install -r requirements.txt
 ```
 
-## Configuration
 
-Set your API key as an environment variable:
-
-```bash
-export OPENAI_API_KEY="your-api-key-here"
+# Quick Start
 ```
 
-Or edit the shell scripts (`run_single_turn.sh` / `run_multi_turn.sh`) to set API credentials directly.
-
-## Usage
-
-### Single-Turn Evaluation
-
-```bash
-bash run_single_turn.sh <MODEL_NAME> <API_URL>
-
-# Example
-bash run_single_turn.sh gpt-4o https://api.openai.com/v1
 ```
 
-### Multi-Turn Evaluation
-
-```bash
-bash run_multi_turn.sh <MODEL_NAME> <API_URL>
-
-# Example
-bash run_multi_turn.sh gpt-4o https://api.openai.com/v1
-```
-
-### Python Command
-
-```bash
-# Single-turn
-python evaluate_single_turn.py \
-  --generation_model_name "gpt-4o" \
-  --evaluation_model_name "gemini-2.5-pro" \
-  --data_dir "data" \
-  --results_dir "results_single_turn"
-
-# Multi-turn
-python evaluate_multi_turn.py \
-  --generation_model_name "gpt-4o" \
-  --evaluation_model_name "gemini-2.5-pro" \
-  --data_dir "data" \
-  --results_dir "results_multi_turn"
-```
-
-## Key Parameters
-
-| Parameter | Description | Default |
-|-----------|-------------|---------|
-| `--generation_model_name` | Model name for code generation | `gpt-4o` |
-| `--evaluation_model_name` | Model name for evaluation | `gpt-4o` |
-| `--data_dir` | Data directory path | `data` |
-| `--results_dir` | Results output directory | `results` |
-| `--difficulty` | Difficulty level (simple/middle/hard) | All |
-| `--timeout` | Code execution timeout (seconds) | `120` |
-| `--max_retries` | Maximum retry count | `5` |
-| `--max_qps` | Maximum requests per second | `20` |
-
-## Output Files
-
-Results are saved in the specified results directory:
-
-- `generated_code_*.py` - Generated Python code
-- `generated_plot_*.png` - Generated visualization
-- `score_*.json` - Evaluation scores
-- `statistics.json` - Overall statistics
-- `*_cache.jsonl` - API request cache
-
-## Evaluation Metrics
-
-### Task Compliance
-- Layout Compliance
-- Chart Type Compliance
-- Visualization Requirement Fulfillment
-- Complete Task Fulfillment
-
-### Chart Quality
-- Clarity (No Overlap)
-- Layout Quality
-- Color Quality
-- Text Clarity
-- Formatting and Professional Standards
-
+# Leaderboard -->
