@@ -120,6 +120,18 @@ bash run_multi_turn.sh <model_name> <api_base_url>
 Results will be saved to `results_single_turn/` (single-turn) or `results_multi_turn/` (multi-turn).
 
 
+## Citation
+If you use PlotCraft in your research, please cite our paper:
+
+```bibtex
+@article{zhang2025plotcraft,
+  title={PlotCraft: Pushing the Limits of LLMs for Complex and Interactive Data Visualization},
+  author={Zhang, Jiajun and Zhang, Jianke and Cui, Zeyu and Yang, Jiaxi and Zhang, Lei and Hui, Binyuan and Liu, Qiang and Wang, Zilei and Wang, Liang and Lin, Junyang},
+  journal={arXiv preprint arXiv:2511.00010},
+  year={2025}
+}
+```
+
 
 <!-- # Installation
 ```bash
